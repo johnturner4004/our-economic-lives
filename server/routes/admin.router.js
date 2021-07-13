@@ -76,22 +76,22 @@ router.post('/create_coach', rejectUnauthorized, (req, res) => {
 });
 
 // route to create an admin through postman or a similar service
-// router.post('/create_admin', (req, res) => {
-//   const firstName = req.body.first_name;
-//   const lastName = req.body.last_name
-//   const email = req.body.email;
-//   const password = encryptLib.encryptPassword(req.body.password);
-//   const authorization = 1;
-//   const queryText = `INSERT INTO "user" (first_name, last_name, email, password, "authorization")
-//         VALUES ($1, $2, $3, $4, $5);`;
-//   pool
-//     .query(queryText, [firstName, lastName, email, password, authorization])
-//     .then(() => res.sendStatus(201))
-//     .catch((err) => {
-//       console.log('adding new coach failed: ', err);
-//       res.sendStatus(500);
-//     });
-// });
+router.post('/create_admin', (req, res) => {
+  const firstName = req.body.first_name;
+  const lastName = req.body.last_name
+  const email = req.body.email;
+  const password = encryptLib.encryptPassword(req.body.password);
+  const authorization = 1;
+  const queryText = `INSERT INTO "user" (first_name, last_name, email, password, "authorization")
+        VALUES ($1, $2, $3, $4, $5);`;
+  pool
+    .query(queryText, [firstName, lastName, email, password, authorization])
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log('adding new coach failed: ', err);
+      res.sendStatus(500);
+    });
+});
 
 //router to get the list of coaches that exist in the database
 router.get('/coach-list', rejectUnauthorized, (req, res) => {
