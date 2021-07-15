@@ -13,6 +13,9 @@ export default function ClientPyramid() {
       alignItems: 'center',
       textAlign: "center",
       width:'100vw',
+      padding: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     selectText: {
       fontSize: '4vh',

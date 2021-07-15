@@ -51,7 +51,6 @@ export default function Pyramid(props) {
       justifyContent: "center",
       alignItems: "center",
       width: "100vw",
-      margin: 0,
       padding: 0,
     },
     row: {
