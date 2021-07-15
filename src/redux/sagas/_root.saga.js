@@ -4,7 +4,7 @@ import addCoachComment from './addCoachComment.saga';
 import approveCritExp from './approveCritExp.saga';
 import blockDetails from './blockDetails.saga';
 import buildingBlocks from './buildingBlocks.saga';
-import createClient from './createClient.saga';
+import createClient from './createClient.saga.js';
 import createCoach from './createCoach.saga';
 import createCritExp from './createCritExp.saga';
 import createIndustryPyramid from './createIndustryPyramid.saga';
