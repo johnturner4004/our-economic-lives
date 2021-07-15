@@ -98,18 +98,9 @@ export default function Login() {
                     gutterBottom
                     style={{ color: '#12ae5b' }}
                 >
-                    <span onClick={() => {
-                        setEmail('karsten@gmail.com');
-                        setPassword('1234567890');
-                    }}>Our</span>
-                    <span onClick={() => {
-                        setEmail('alex@initech.org');
-                        setPassword('testcoach');
-                    }}> Economic</span>
-                    <span onClick={() => {
-                        setEmail('sam@oureconomiclives.com');
-                        setPassword('programadmin');
-                    }}> Lives</span>
+                    <span>Our</span>
+                    <span> Economic</span>
+                    <span> Lives</span>
                 </Typography>
 
                 <form
